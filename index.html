@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildMySkill.ai — Practical AI Skills for Students & Professionals</title>
+  <meta name="description" content="BuildMySkill.ai helps students and working professionals in India build practical AI skills — from AI foundations to everyday productivity and no-code automation — through hands-on, project-based learning." />
+  <meta name="theme-color" content="#3659e3" />
+  <link rel="canonical" href="https://buildmyskill.ai/" />
+
+  <!-- Social sharing (WhatsApp / LinkedIn / X previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BuildMySkill.ai" />
+  <meta property="og:title" content="BuildMySkill.ai — Build skills for an AI-powered world" />
+  <meta property="og:description" content="Beginner-friendly, project-based AI learning. Learn AI, apply it to real work, and build practical solutions." />
+  <meta property="og:url" content="https://buildmyskill.ai/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233659e3'/%3E%3Cstop offset='1' stop-color='%238b6cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "BuildMySkill.ai",
+    "url": "https://buildmyskill.ai/",
+    "slogan": "Building Skills for an AI-Powered World",
+    "description": "Practical, project-based AI learning for students, professionals and teams.",
+    "email": "hello@buildmyskill.ai",
+    "areaServed": "IN",
+    "telephone": "+91-8971326915",
+    "founder": [
+      {"@type": "Person", "name": "Ansar KP"},
+      {"@type": "Person", "name": "Siddique KA"},
+      {"@type": "Person", "name": "Shemeer PM"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --ink:#0f1730; --ink-2:#2a3550; --muted:#5f6b85; --muted-2:#8b95aa;
+      --bg:#f7f9fc; --white:#fff; --line:#e5e9f2; --line-2:#d7deee;
+      --blue:#3659e3; --blue-d:#2846c4; --blue-soft:#edf1ff; --violet:#7a62f0;
+      --teal:#22c9a2; --teal-d:#12866c; --teal-soft:#e2fbf3;
+      --amber:#c06b26; --amber-soft:#fff1e4;
+      --navy:#0f1833; --navy-2:#172241; --navy-line:#2b3758;
+      --radius:22px; --radius-sm:14px;
+      --shadow:0 24px 60px rgba(22,36,84,.10); --shadow-sm:0 10px 26px rgba(22,36,84,.07);
+      --head:"Plus Jakarta Sans",Inter,ui-sans-serif,system-ui,sans-serif;
+      --body:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    img,svg{max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit;color:inherit}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700}
+    .skip:focus{top:12px}
+    :focus-visible{outline:3px solid #8aa0ff;outline-offset:3px;border-radius:8px}
+    h1,h2,h3{font-family:var(--head);color:var(--ink)}
+
+    /* ---------- Announcement + header ---------- */
+    .announce{background:var(--navy);color:#d9e0f3;font-size:13px;text-align:center;padding:9px 14px}
+    .announce a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    .announce .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:8px;box-shadow:0 0 0 4px #22c9a233;vertical-align:1px}
+    header.site{position:sticky;top:0;z-index:50;background:rgba(247,249,252,.82);backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+    header.site.scrolled{border-color:var(--line);box-shadow:0 6px 24px rgba(20,32,74,.05)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+    .brand{display:flex;align-items:center;gap:11px;font-family:var(--head);font-weight:800;font-size:20px;letter-spacing:-.6px}
+    .brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(140deg,var(--blue),#8b6cff);display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 8px 20px #3659e344;flex-shrink:0}
+    .brand em{font-style:normal;color:var(--blue)}
+    .navlinks{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:#4b5670}
+    .navlinks a{padding:8px 12px;border-radius:10px;transition:.15s}
+    .navlinks a:hover,.navlinks a.active{color:var(--blue);background:var(--blue-soft)}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:13px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s,border-color .15s;white-space:nowrap}
+    .btn-sm{padding:10px 16px;font-size:14px;border-radius:12px}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px #3659e330}
+    .btn-primary:hover{background:var(--blue-d);transform:translateY(-1px)}
+    .btn-secondary{background:#fff;border-color:var(--line-2);color:var(--ink-2)}
+    .btn-secondary:hover{border-color:#b6c3ee;background:#fbfcff}
+    .btn-ghost-light{background:transparent;border-color:#ffffff55;color:#fff}
+    .btn-ghost-light:hover{background:#ffffff14}
+    .btn-white{background:#fff;color:#2b45c4}
+    .btn-white:hover{background:#eff2ff}
+    .btn-block{width:100%}
+    .menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:11px;width:44px;height:44px;font-size:20px;cursor:pointer}
+
+    /* ---------- Hero ---------- */
+    .hero{padding:64px 0 84px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 82% 18%,#e1e8ff 0,transparent 38%),radial-gradient(ellipse at 4% 92%,#dcf9f1 0,transparent 30%),var(--bg)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid #d9e1ff;border-radius:999px;background:#fff;color:#3350c8;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+    .eyebrow-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;box-shadow:0 0 0 4px #22c9a222}
+    h1{font-size:clamp(40px,5.4vw,68px);letter-spacing:-2.8px;line-height:1.05;margin:22px 0;max-width:640px;font-weight:800}
+    h1 .accent{background:linear-gradient(100deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{font-size:18px;line-height:1.75;color:var(--muted);max-width:560px;margin:0 0 30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-points{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;padding:0;list-style:none;color:#56627c;font-size:14px;font-weight:600}
+    .hero-points li{display:flex;align-items:center;gap:8px}
+    .tick{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--teal-soft);color:var(--teal-d);font-size:11px;font-weight:900;flex-shrink:0}
+    .micro-proof{display:flex;align-items:center;gap:12px;margin-top:24px;color:#6a748b;font-size:13px}
+    .avatar-stack{display:flex;padding-left:4px}
+    .avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--bg);margin-left:-6px;font-size:13px;background:#dce4ff;color:#354fc4}
+    .avatar:nth-child(2){background:#d7f6ed;color:#137b64}.avatar:nth-child(3){background:#ffe8d8;color:#9c5323}.avatar:nth-child(4){background:#eadfff;color:#6b42b5}
+
+    .visual{position:relative;min-height:450px;display:grid;place-items:center}
+    .orbit{position:absolute;width:400px;height:400px;border-radius:50%;border:1px dashed #c4cff3}
+    .orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;border:1px solid #d8def5;inset:34px}
+    .orbit:after{inset:80px}
+    .dashboard{width:min(100%,430px);position:relative;background:#fff;border:1px solid #e4e9f7;border-radius:24px;padding:22px;box-shadow:var(--shadow);transform:rotate(-2deg);z-index:2}
+    .dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:10px}
+    .dash-title{font-size:12px;font-weight:800;letter-spacing:.4px}
+    .live{font-size:10px;font-weight:800;color:#16836d;background:#e2fbf4;padding:5px 9px;border-radius:999px;white-space:nowrap}
+    .dash-label{font-size:11px;color:var(--muted-2);font-weight:700;letter-spacing:.4px}
+    .dash-head{font-family:var(--head);font-size:22px;font-weight:800;letter-spacing:-.6px;margin:4px 0 14px}
+    .progress-row{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#66718a;margin:13px 0 7px}
+    .progress{height:7px;background:#edf0f7;border-radius:99px;overflow:hidden}
+    .progress i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),#8e7bff);width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+    .progress.teal i{background:linear-gradient(90deg,#22c9a2,#8be9d3)}
+    .mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+    .mini-card{padding:13px;border:1px solid #edf0f7;border-radius:14px;background:#fbfcff}
+    .mini-icon{width:30px;height:30px;border-radius:10px;background:#e9edff;display:grid;place-items:center;color:var(--blue);font-size:15px;margin-bottom:9px}
+    .mini-card strong{font-size:13px;display:block}
+    .mini-card small{color:var(--muted-2);font-size:11px}
+    .float-card{position:absolute;z-index:3;padding:12px 15px;border:1px solid #e6ebf5;border-radius:15px;background:#fff;box-shadow:0 12px 32px #1d2a5a14;font-size:12px;font-weight:700;display:flex;align-items:center;gap:9px;max-width:250px}
+    .float-card small{display:block;font-size:11px;font-weight:500;color:#8490a7}
+    .float-one{top:40px;right:-6px;transform:rotate(3deg)}
+    .float-two{bottom:34px;left:-10px;transform:rotate(-3deg)}
+    .float-icon{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#e1fbf3;color:#16866d;flex-shrink:0}
+
+    /* ---------- Trust strip ---------- */
+    .trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+    .trust-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+    .trust-label{font-size:12px;color:var(--muted-2);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+    .trust-items{display:flex;gap:28px;flex-wrap:wrap;color:#5c6882;font-weight:700;font-size:14px}
+    .trust-items span:before{content:"✓";color:#1fb590;margin-right:8px}
+
+    /* ---------- Generic sections ---------- */
+    section{padding:92px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 46px}
+    .section-head.left{text-align:left;margin:0 0 30px}
+    .kicker{font-size:12px;text-transform:uppercase;letter-spacing:1.7px;font-weight:800;color:var(--blue)}
+    h2{font-size:clamp(30px,3.6vw,44px);line-height:1.14;letter-spacing:-1.5px;margin:12px 0 14px;font-weight:800}
+    .section-head p,.lead{font-size:17px;color:var(--muted);margin:0}
+    .white-bg{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+    /* What you'll learn */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px #18244a0f;border-color:#d4ddfa}
+    .card-icon{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:var(--blue-soft);color:#3e5be1;font-size:22px;margin-bottom:20px}
+    .card:nth-child(2) .card-icon{background:var(--teal-soft);color:var(--teal-d)}
+    .card:nth-child(3) .card-icon{background:var(--amber-soft);color:var(--amber)}
+    .card h3{font-size:20px;letter-spacing:-.4px;margin:0 0 9px}
+    .card p{font-size:15px;color:var(--muted);margin:0 0 18px}
+    .checklist{list-style:none;padding:0;margin:0;display:grid;gap:9px;color:#46526b;font-size:14px}
+    .checklist li{display:flex;gap:9px;align-items:flex-start}
+    .checklist li:before{content:"✓";color:#1fb590;font-weight:900}
+
+    /* Programs */
+    .programs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+    .program{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;position:relative;transition:box-shadow .25s,border-color .25s}
+    .program:hover{box-shadow:var(--shadow-sm);border-color:#d4ddfa}
+    .program.featured{border:2px solid var(--blue);box-shadow:var(--shadow)}
+    .ribbon{position:absolute;top:-13px;left:24px;background:var(--blue);color:#fff;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+    .level{display:inline-flex;align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:5px 10px;border-radius:8px;background:var(--blue-soft);color:var(--blue)}
+    .level.l2{background:var(--teal-soft);color:var(--teal-d)}
+    .level.l3{background:var(--amber-soft);color:var(--amber)}
+    .program h3{font-size:22px;margin:14px 0 6px;letter-spacing:-.5px}
+    .program .for{font-size:14px;color:var(--muted);margin:0 0 18px}
+    .program h4{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted-2);margin:0 0 10px;font-weight:800}
+    .program .checklist{margin-bottom:20px}
+    .tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+    .tools span{font-size:12px;font-weight:600;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:#4b5670;background:#fafbfe}
+    .program-meta{margin-top:auto;border-top:1px dashed var(--line-2);padding-top:16px;display:grid;gap:12px}
+    .meta-row{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+    .meta-row b{color:var(--ink-2);font-weight:700;text-align:right}
+    .note{font-size:13px;color:var(--muted-2);text-align:center;margin-top:22px}
+
+    /* Pathway (dark) */
+    .pathway{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+    .pathway:before{content:"";position:absolute;width:520px;height:520px;right:-170px;top:-230px;background:radial-gradient(circle,#3e5be150,transparent 65%)}
+    .pathway h2,.pathway h3{color:#fff}
+    .pathway .section-head p{color:#b4bfd6}
+    .pathway .kicker{color:#8ea0ff}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+    .step{border:1px solid var(--navy-line);background:var(--navy-2);padding:28px;border-radius:20px;position:relative}
+    .step-number{font-size:12px;color:#9cafff;font-weight:800;letter-spacing:1px}
+    .step h3{font-size:22px;margin:14px 0 9px}
+    .step p{font-size:15px;color:#b9c3d8;margin:0}
+    .step-tag{display:inline-block;margin-top:20px;padding:6px 10px;border:1px solid #394666;border-radius:8px;color:#c7d1ff;font-size:12px;font-weight:700}
+    .step-arrow{position:absolute;right:-18px;top:46%;z-index:2;width:34px;height:34px;display:grid;place-items:center;background:#29385c;border:1px solid #405078;border-radius:50%;color:#aebcff}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+    .project-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .project-emoji{width:42px;height:42px;border-radius:12px;background:#f3f5fc;display:grid;place-items:center;font-size:20px}
+    .project h3{font-size:17px;margin:4px 0 0;letter-spacing:-.3px}
+    .project p{font-size:14px;color:var(--muted);margin:0}
+    .project .outcome{font-size:13px;color:var(--teal-d);font-weight:700;margin-top:auto;padding-top:6px}
+
+    /* How learning works */
+    .how{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:how}
+    .how-item{padding:24px;border-radius:18px;background:#fff;border:1px solid var(--line);position:relative}
+    .how-item:before{counter-increment:how;content:"0" counter(how);font-family:var(--head);font-size:13px;font-weight:800;color:var(--blue);background:var(--blue-soft);padding:5px 9px;border-radius:8px;display:inline-block;margin-bottom:14px}
+    .how-item h3{font-size:17px;margin:0 0 6px}
+    .how-item p{font-size:14px;color:var(--muted);margin:0}
+
+    /* Audience + quiz */
+    .audience-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+    .audience-copy p{color:var(--muted);margin:0 0 24px;font-size:16px}
+    .audience-list{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .audience-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);padding:16px;border-radius:15px;font-size:14px;font-weight:700}
+    .audience-item b{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--blue-soft);color:var(--blue);font-size:17px;flex-shrink:0}
+    .audience-item:nth-child(2) b,.audience-item:nth-child(4) b,.audience-item:nth-child(6) b{background:var(--teal-soft);color:var(--teal-d)}
+
+    .quiz-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+    .quiz{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow-sm)}
+    .quiz-progress{display:flex;gap:6px;margin-bottom:20px}
+    .quiz-progress i{flex:1;height:5px;border-radius:9px;background:#e8ecf5;transition:background .3s}
+    .quiz-progress i.on{background:var(--blue)}
+    .quiz-q{font-family:var(--head);font-size:20px;font-weight:700;margin:0 0 16px;letter-spacing:-.3px}
+    .quiz-count{font-size:12px;font-weight:700;color:var(--muted-2);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+    .options{display:grid;gap:10px}
+    .opt{text-align:left;padding:15px 16px;border:1.5px solid var(--line);border-radius:14px;background:#fbfcff;cursor:pointer;font-size:15px;font-weight:600;display:flex;align-items:center;gap:12px;transition:.15s;min-height:54px}
+    .opt:hover{border-color:#b9c6f3;background:#f5f7ff}
+    .opt .k{width:26px;height:26px;border-radius:8px;background:#eef1fa;display:grid;place-items:center;font-size:12px;font-weight:800;color:#55617b;flex-shrink:0}
+    .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:14px}
+    .linkbtn{background:none;border:0;color:var(--blue);font-weight:700;cursor:pointer;padding:6px 0}
+    .linkbtn[disabled]{color:#b8c0d2;cursor:default}
+    .result{display:none}
+    .result.show{display:block}
+    .result-badge{display:inline-block;font-size:12px;font-weight:800;color:var(--teal-d);background:var(--teal-soft);padding:6px 11px;border-radius:999px;margin-bottom:12px}
+    .result h3{font-size:26px;margin:0 0 8px;letter-spacing:-.6px}
+    .result p{color:var(--muted);margin:0 0 20px}
+    .result .actions{gap:10px}
+
+    /* Approach */
+    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+    .principle{padding:26px;border-radius:20px;background:linear-gradient(180deg,#fff,#fafbff);border:1px solid var(--line)}
+    .principle .num{font-family:var(--head);font-weight:800;font-size:34px;letter-spacing:-1px;background:linear-gradient(100deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .principle h3{font-size:18px;margin:6px 0 6px}
+    .principle p{font-size:14px;color:var(--muted);margin:0}
+
+    /* Our team (people) */
+    .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto}
+    .person{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 24px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .person:hover{transform:translateY(-4px);box-shadow:0 18px 40px #18244a0f;border-color:#d4ddfa}
+    .person-avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:28px;letter-spacing:-.5px;color:#fff;background:linear-gradient(140deg,var(--blue),#8b6cff);box-shadow:0 12px 26px #3659e333;position:relative}
+    .person:nth-child(2) .person-avatar{background:linear-gradient(140deg,#14a985,#4fdcb9);box-shadow:0 12px 26px #22c9a233}
+    .person:nth-child(3) .person-avatar{background:linear-gradient(140deg,#d0782f,#f3a866);box-shadow:0 12px 26px #c06b2633}
+    .person h3{font-size:20px;margin:0 0 4px;letter-spacing:-.3px}
+    .person .role{font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.8px}
+    .team-cta{text-align:center;margin-top:30px;font-size:15px;color:var(--muted)}
+    .team-cta a{color:var(--blue);font-weight:700}
+    @media(max-width:760px){
+      .people{grid-template-columns:1fr;max-width:420px}
+      .person{display:flex;align-items:center;gap:16px;text-align:left;padding:18px 20px}
+      .person-avatar{width:60px;height:60px;font-size:20px;margin:0;flex-shrink:0}
+    }
+
+    /* Teams */
+    .teams{border-radius:26px;border:1px solid var(--line);background:#fff;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden}
+    .teams-copy{padding:44px}
+    .teams-copy h2{margin-top:10px}
+    .teams-copy p{color:var(--muted);margin:0 0 22px}
+    .teams-side{background:linear-gradient(160deg,#f1f4ff,#eafaf5);padding:44px;display:grid;gap:12px;align-content:center}
+    .teams-side div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px;font-weight:600;display:flex;gap:10px;align-items:center}
+
+    /* Waitlist / promise */
+    .promise{padding:0 0 92px}
+    .promise-box{border-radius:28px;background:linear-gradient(120deg,#3755dc,#6459e6 62%,#8374f6);padding:48px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:40px;position:relative;overflow:hidden}
+    .promise-box:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff24;border-radius:50%;left:30%;top:-150px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff06;pointer-events:none}
+    .promise-box h2{color:#fff;margin:10px 0 14px}
+    .promise-box .kicker{color:#cfd7ff}
+    .promise-box p{margin:0 0 22px;color:#e1e6ff;font-size:16px}
+    .perks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:11px;font-size:15px;color:#eef1ff}
+    .perks li{display:flex;gap:10px}
+    .perks li:before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#ffffff26;font-size:12px;font-weight:900;flex-shrink:0}
+    .contact-alt{display:flex;flex-wrap:wrap;gap:10px}
+
+    .form-card{background:#fff;color:var(--ink);border-radius:22px;padding:28px;position:relative;z-index:1;box-shadow:0 24px 60px rgba(10,16,50,.25)}
+    .form-card h3{font-size:20px;margin:0 0 4px}
+    .form-card .sub{font-size:14px;color:var(--muted);margin:0 0 20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:grid;gap:6px;margin-bottom:14px}
+    .field label{font-size:13px;font-weight:700;color:var(--ink-2)}
+    .field label .opt-tag{font-weight:500;color:var(--muted-2)}
+    .field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line-2);border-radius:12px;background:#fbfcff;font-size:16px;transition:border-color .15s,background .15s}
+    .field textarea{resize:vertical;min-height:80px}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px #3659e31a}
+    .field.invalid input,.field.invalid select{border-color:#e0485a;background:#fff8f8}
+    .err{font-size:12px;color:#d33a4c;display:none}
+    .field.invalid .err{display:block}
+    .phone{display:flex}
+    .phone span{display:grid;place-items:center;padding:0 12px;border:1.5px solid var(--line-2);border-right:0;border-radius:12px 0 0 12px;background:#f1f3f9;font-size:15px;font-weight:600;color:#55617b}
+    .phone input{border-radius:0 12px 12px 0}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin:4px 0 18px}
+    .consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--blue);flex-shrink:0}
+    .hp{position:absolute;left:-9999px}
+    .form-foot{font-size:12px;color:var(--muted-2);text-align:center;margin:12px 0 0}
+    .form-status{display:none;text-align:center;padding:12px 4px}
+    .form-status.show{display:block}
+    .form-status .big{width:58px;height:58px;border-radius:50%;background:var(--teal-soft);color:var(--teal-d);display:grid;place-items:center;font-size:26px;margin:0 auto 14px}
+    .form-status h3{font-size:22px;margin:0 0 8px}
+    .form-status p{color:var(--muted);font-size:15px;margin:0 0 18px}
+    .form-status .actions{justify-content:center}
+    .btn[aria-busy="true"]{opacity:.7;pointer-events:none}
+
+    /* FAQ */
+    .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+    .faq-list{display:grid;gap:10px}
+    .faq{border:1px solid var(--line);background:#fff;border-radius:16px;overflow:hidden;transition:border-color .2s}
+    .faq.open{border-color:#cdd7fb}
+    .faq button{width:100%;text-align:left;border:0;background:none;padding:19px 20px;font-size:15px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;color:var(--ink)}
+    .faq .plus{font-size:22px;color:var(--blue);line-height:1;transition:transform .2s;flex-shrink:0}
+    .faq.open .plus{transform:rotate(45deg)}
+    .faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+    .faq.open .faq-answer{grid-template-rows:1fr}
+    .faq-answer > div{overflow:hidden}
+    .faq-answer p{margin:0;padding:0 20px 19px;color:var(--muted);font-size:15px}
+    .faq-help{margin-top:22px;padding:18px;border-radius:16px;background:#fff;border:1px dashed var(--line-2);font-size:14px;color:var(--muted)}
+    .faq-help a{color:var(--blue);font-weight:700}
+
+    /* Footer */
+    footer{background:#0d1428;color:#fff;padding:56px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+    .footer-brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:18px;margin-bottom:12px}
+    .footer-grid p{font-size:14px;color:#a9b4cb;margin:0;max-width:300px}
+    .footer-grid h4{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;color:#7f8bab;margin:4px 0 14px}
+    .footer-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:14px;color:#d0d7e7}
+    .footer-grid a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid #222c48;margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:#8995b2}
+
+    /* Mobile sticky CTA + WhatsApp */
+    .mobile-cta{display:none}
+    .wa-float{position:fixed;right:20px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:none;place-items:center;box-shadow:0 12px 28px #25d36655;transition:transform .2s}
+    .wa-float:hover{transform:scale(1.06)}
+    .wa-float svg{width:28px;height:28px}
+    body.has-wa .wa-float{display:grid}
+    [data-wa]{display:none!important}
+    body.has-wa [data-wa]{display:inline-flex!important}
+
+    /* Reveal on scroll — content stays visible if JS fails */
+    .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .js .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*:before,*:after{transition:none!important;animation:none!important}
+      .js .reveal{opacity:1;transform:none}
+    }
+
+    /* ---------- Responsive ---------- */
+    @media(max-width:1020px){
+      .navlinks a{padding:8px 9px}
+      .how{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;gap:30px}
+      .hero{padding-top:46px}
+      .visual{min-height:430px}
+      .float-one{right:4%}.float-two{left:3%}
+      .audience-grid,.faq-grid,.quiz-wrap{grid-template-columns:1fr;gap:32px}
+      .cards,.steps,.projects{grid-template-columns:1fr 1fr}
+      .programs{grid-template-columns:1fr;max-width:560px;margin:auto}
+      .program.featured{order:-1}
+      .step:last-child{grid-column:1/-1}
+      .step-arrow{display:none}
+      .principles{grid-template-columns:1fr}
+      .teams{grid-template-columns:1fr}
+      .promise-box{grid-template-columns:1fr;padding:36px}
+      .trust-inner{justify-content:center}
+      .trust-label{width:100%;text-align:center}
+      .trust-items{justify-content:center}
+    }
+    @media(max-width:860px){
+      .navlinks{display:none;position:absolute;left:0;right:0;top:70px;background:#fff;padding:14px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:4px;z-index:60}
+      .navlinks.show{display:flex}
+      .navlinks a{padding:13px 14px;font-size:15px}
+      .menu-btn{display:grid;place-items:center}
+      .nav-right .btn{display:none}
+    }
+    @media(max-width:620px){
+      .wrap{width:calc(100% - 32px)}
+      .nav{height:66px}
+      .navlinks{top:64px}
+      .announce{font-size:12px}
+      .hero{padding:34px 0 50px}
+      h1{font-size:40px;letter-spacing:-1.8px}
+      .hero-copy{font-size:16px}
+      .actions .btn{flex:1 1 100%}
+      .visual{min-height:auto;padding:10px 0 60px}
+      .orbit{width:290px;height:290px}
+      .dashboard{padding:18px;transform:none}
+      .float-card{font-size:11px;padding:9px 11px;max-width:200px}
+      .float-one{top:auto;bottom:6px;right:0;transform:none}
+      .float-two{display:none}
+      .trust-items{gap:10px 16px;font-size:13px}
+      section{padding:64px 0}
+      .section-head{margin-bottom:30px}
+      .section-head p,.lead{font-size:16px}
+      .cards,.steps,.projects,.how{grid-template-columns:1fr}
+      .step:last-child{grid-column:auto}
+      .audience-list{grid-template-columns:1fr}
+      .quiz{padding:22px}
+      .teams-copy,.teams-side{padding:28px 22px}
+      .promise{padding-bottom:64px}
+      .promise-box{padding:28px 18px;border-radius:22px}
+      .form-card{padding:22px 18px}
+      .grid-2{grid-template-columns:1fr;gap:0}
+      .footer-grid{grid-template-columns:1fr}
+      body{padding-bottom:76px}
+      .mobile-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+      .mobile-cta.show{transform:none}
+      .mobile-cta .btn{flex:1;padding:13px 14px}
+      .wa-float{bottom:88px;right:16px;width:52px;height:52px}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="announce" role="note">
+    <span class="dot" aria-hidden="true"></span>Founding cohort registrations are open — <a href="#start">join the waitlist</a> for first access to dates & fees.
+  </div>
+
+  <header class="site" id="siteHeader">
+    <div class="wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="BuildMySkill.ai home"><span class="brand-mark">B</span><span>BuildMySkill<em>.ai</em></span></a>
+        <div class="navlinks" id="navlinks">
+          <a href="#learning">What you'll learn</a>
+          <a href="#programs">Programs</a>
+          <a href="#pathway">Learning path</a>
+          <a href="#projects">Projects</a>
+          <a href="#who">Who it's for</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-right">
+          <a class="btn btn-primary btn-sm" href="#start">Join the waitlist <span aria-hidden="true">→</span></a>
+          <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="navlinks">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Practical AI learning for everyone</div>
+          <h1>Build skills for an <span class="accent">AI-powered</span> world.</h1>
+          <p class="hero-copy">Move beyond knowing <em>about</em> AI. Learn how to use it, apply it to real work, and build practical solutions — through beginner-friendly, hands-on, project-based training.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#quiz">Find your starting point <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#programs">Explore programs <span aria-hidden="true">↘</span></a>
+          </div>
+          <ul class="hero-points">
+            <li><span class="tick">✓</span>No coding needed to start</li>
+            <li><span class="tick">✓</span>Learn by building real projects</li>
+            <li><span class="tick">✓</span>Built for Indian classrooms & workplaces</li>
+          </ul>
+          <div class="micro-proof">
+            <div class="avatar-stack" aria-hidden="true"><span class="avatar">🎓</span><span class="avatar">💼</span><span class="avatar">📊</span><span class="avatar">🚀</span></div>
+            <span>For students, professionals, teams and curious builders</span>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="Illustration of a practical AI learning dashboard">
+          <div class="orbit" aria-hidden="true"></div>
+          <div class="dashboard">
+            <div class="dash-top"><div class="dash-title">YOUR AI SKILL JOURNEY</div><div class="live">LEARN BY DOING</div></div>
+            <div class="dash-label">YOUR NEXT CHAPTER</div>
+            <div class="dash-head">From curious to capable.</div>
+            <div class="progress-row"><span>AI foundations</span><strong>01</strong></div>
+            <div class="progress"><i data-w="88%"></i></div>
+            <div class="progress-row"><span>Everyday AI productivity</span><strong>02</strong></div>
+            <div class="progress teal"><i data-w="68%"></i></div>
+            <div class="progress-row"><span>Automation & AI workflows</span><strong>03</strong></div>
+            <div class="progress"><i data-w="42%"></i></div>
+            <div class="mini-cards">
+              <div class="mini-card"><div class="mini-icon">✳</div><strong>Learn a skill</strong><small>Understand the how</small></div>
+              <div class="mini-card"><div class="mini-icon">↗</div><strong>Build a solution</strong><small>Put it into practice</small></div>
+            </div>
+          </div>
+          <div class="float-card float-one"><span class="float-icon">✦</span><div>Practical, not just theory<small>Apply every concept</small></div></div>
+          <div class="float-card float-two"><span class="float-icon">✓</span><div>Made for beginners<small>No coding background needed</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST STRIP ================= -->
+    <div class="trust">
+      <div class="wrap trust-inner">
+        <div class="trust-label">A practical approach to AI learning</div>
+        <div class="trust-items"><span>Beginner-friendly</span><span>Hands-on learning</span><span>Real-world applications</span><span>Skills that grow with you</span></div>
+      </div>
+    </div>
+
+    <!-- ================= WHAT YOU'LL LEARN ================= -->
+    <section id="learning">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">What you'll learn</div>
+          <h2>Turn AI knowledge into skills you can use.</h2>
+          <p>Build confidence step by step — from your first AI prompt to applying AI in your work and creating useful workflows.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon">✳</div>
+            <h3>AI Foundations</h3>
+            <p>Understand the tools, concepts and techniques that make AI useful in everyday life and work.</p>
+            <ul class="checklist"><li>Get started with popular AI tools</li><li>Write clearer, more effective prompts</li><li>Research, summarise and generate ideas</li><li>Check AI output for accuracy and bias</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">⚡</div>
+            <h3>AI for Productivity</h3>
+            <p>Spend less time on repetitive tasks and more on work that needs your judgement and creativity.</p>
+            <ul class="checklist"><li>Create documents and presentations</li><li>Work smarter with data and spreadsheets</li><li>Improve everyday work processes</li><li>Draft emails, reports and summaries faster</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">⌘</div>
+            <h3>Automation & AI Building</h3>
+            <p>Explore how AI tools work together to turn repeatable tasks into useful, connected workflows.</p>
+            <ul class="checklist"><li>Map a process before automating it</li><li>Explore no-code and low-code workflows</li><li>Build practical projects as you progress</li><li>Connect AI to forms, sheets and messaging</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAMS ================= -->
+    <section id="programs" class="white-bg">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">Programs</div>
+          <h2>Three tracks. One clear progression.</h2>
+          <p>Start where you are today. Each track builds on the one before, so you can begin with the basics or jump ahead if you're already using AI.</p>
+        </div>
+        <div class="programs">
+          <article class="program reveal">
+            <span class="level">Beginner</span>
+            <h3>AI Foundations</h3>
+            <p class="for">For first-time users, students and anyone who wants to use AI with confidence.</p>
+            <h4>You'll be able to</h4>
+            <ul class="checklist"><li>Choose the right AI tool for a task</li><li>Write prompts that get reliable results</li><li>Research, summarise and brainstorm faster</li><li>Use AI responsibly and verify its output</li></ul>
+            <h4>Tools you'll explore</h4>
+            <div class="tools"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Perplexity</span></div>
+            <div class="program-meta">
+              <div class="meta-row"><span>Format</span><b>Live online + practice</b></div>
+              <div class="meta-row"><span>Dates & fees</span><b>Shared with waitlist first</b></div>
+              <a class="btn btn-secondary btn-block" href="#start" data-track="AI Foundations">Join waitlist for this track</a>
+            </div>
+          </article>
+
+          <article class="program featured reveal">
+            <span class="ribbon">Most relevant for professionals</span>
+            <span class="level l2">Intermediate</span>
+            <h3>AI for Work & Productivity</h3>
+            <p class="for">For working professionals, managers and freelancers who want to save hours every week.</p>
+            <h4>You'll be able to</h4>
+            <ul class="checklist"><li>Produce documents, decks and reports with AI</li><li>Analyse data in Excel / Google Sheets with AI help</li><li>Build a personal library of reusable prompts</li><li>Redesign one real work process around AI</li></ul>
+            <h4>Tools you'll explore</h4>
+            <div class="tools"><span>Microsoft Copilot</span><span>Excel / Sheets</span><span>Canva</span><span>Notion</span></div>
+            <div class="program-meta">
+              <div class="meta-row"><span>Format</span><b>Live online + practice</b></div>
+              <div class="meta-row"><span>Dates & fees</span><b>Shared with waitlist first</b></div>
+              <a class="btn btn-primary btn-block" href="#start" data-track="AI for Work & Productivity">Join waitlist for this track</a>
+            </div>
+          </article>
+
+          <article class="program reveal">
+            <span class="level l3">Advanced · No-code</span>
+            <h3>AI Automation Builder</h3>
+            <p class="for">For problem-solvers, founders and ops teams ready to automate repeatable work.</p>
+            <h4>You'll be able to</h4>
+            <ul class="checklist"><li>Map a process and spot what to automate</li><li>Build no-code workflows that use AI</li><li>Connect forms, sheets, email and WhatsApp</li><li>Ship a working automation as a portfolio project</li></ul>
+            <h4>Tools you'll explore</h4>
+            <div class="tools"><span>Zapier</span><span>Make</span><span>n8n</span><span>Google Apps Script</span></div>
+            <div class="program-meta">
+              <div class="meta-row"><span>Format</span><b>Live online + project</b></div>
+              <div class="meta-row"><span>Dates & fees</span><b>Shared with waitlist first</b></div>
+              <a class="btn btn-secondary btn-block" href="#start" data-track="AI Automation Builder">Join waitlist for this track</a>
+            </div>
+          </article>
+        </div>
+        <p class="note">Not sure which track fits? <a href="#quiz" style="color:var(--blue);font-weight:700">Take the 30-second starting-point check →</a></p>
+      </div>
+    </section>
+
+    <!-- ================= PATHWAY ================= -->
+    <section class="pathway" id="pathway">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">Your learning journey</div>
+          <h2>Start simple. Apply what you learn. Keep building.</h2>
+          <p>A structured pathway designed to help learners progress from understanding AI to using it with confidence.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><div class="step-number">STEP 01</div><h3>Understand AI</h3><p>Learn the fundamentals, explore useful tools and build confidence through guided examples.</p><span class="step-tag">Explore & understand</span><span class="step-arrow" aria-hidden="true">→</span></article>
+          <article class="step reveal"><div class="step-number">STEP 02</div><h3>Apply AI</h3><p>Use AI to tackle practical tasks, improve productivity and solve problems relevant to your studies or work.</p><span class="step-tag">Practise & improve</span><span class="step-arrow" aria-hidden="true">→</span></article>
+          <article class="step reveal"><div class="step-number">STEP 03</div><h3>Build with AI</h3><p>Progress into automation, connected workflows and hands-on projects as your skills develop.</p><span class="step-tag">Create & experiment</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">Projects you'll build</div>
+          <h2>Leave with work you can show, not just notes.</h2>
+          <p>Every track ends in practical projects grounded in real situations — the kind you can use at work, add to your resume or talk about in an interview.</p>
+        </div>
+        <div class="projects">
+          <article class="project reveal"><div class="project-top"><span class="project-emoji">🔎</span><span class="level">Foundations</span></div><h3>AI research assistant</h3><p>Research any topic, compare sources and turn findings into a clean one-page brief.</p><span class="outcome">→ Faster, better-sourced research</span></article>
+          <article class="project reveal"><div class="project-top"><span class="project-emoji">📝</span><span class="level">Foundations</span></div><h3>Personal prompt playbook</h3><p>A reusable library of prompts for your studies or job — tested, refined and organised.</p><span class="outcome">→ Consistent results, every time</span></article>
+          <article class="project reveal"><div class="project-top"><span class="project-emoji">📊</span><span class="level l2">Productivity</span></div><h3>Weekly report in minutes</h3><p>Turn raw spreadsheet data into a summary, charts and talking points with AI help.</p><span class="outcome">→ Hours saved every week</span></article>
+          <article class="project reveal"><div class="project-top"><span class="project-emoji">🎯</span><span class="level l2">Productivity</span></div><h3>Pitch deck from a brief</h3><p>Go from a one-paragraph idea to a structured, on-brand presentation draft.</p><span class="outcome">→ Sharper first drafts, faster</span></article>
+          <article class="project reveal"><div class="project-top"><span class="project-emoji">💬</span><span class="level l3">Automation</span></div><h3>Customer FAQ responder</h3><p>An AI workflow that drafts replies to common customer questions from your own FAQ.</p><span class="outcome">→ Quicker responses, less repetition</span></article>
+          <article class="project reveal"><div class="project-top"><span class="project-emoji">⚙️</span><span class="level l3">Automation</span></div><h3>Form-to-sheet-to-alert flow</h3><p>Capture enquiries, let AI classify them, log them to a sheet and alert the right person.</p><span class="outcome">→ A working automation for your portfolio</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW LEARNING WORKS ================= -->
+    <section class="white-bg" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">How learning works</div>
+          <h2>Designed for doing, not just watching.</h2>
+          <p>Each module follows the same simple rhythm, so you build a habit of applying what you learn straight away.</p>
+        </div>
+        <div class="how">
+          <div class="how-item reveal"><h3>Learn the concept</h3><p>Short, focused sessions that explain the "why" and the "how" in plain language.</p></div>
+          <div class="how-item reveal"><h3>Practise with guidance</h3><p>Hands-on exercises using real tools, with worked examples to follow.</p></div>
+          <div class="how-item reveal"><h3>Build a project</h3><p>Apply the skill to a practical problem from your studies or work.</p></div>
+          <div class="how-item reveal"><h3>Review & improve</h3><p>Get feedback, refine your work and carry the skill into the next module.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHO IT'S FOR ================= -->
+    <section id="who">
+      <div class="wrap audience-grid">
+        <div class="audience-copy reveal">
+          <div class="kicker">Made for your next step</div>
+          <h2>Whatever your starting point, there's room to grow with AI.</h2>
+          <p>You don't need to arrive as a technical expert. Bring your curiosity, your experience and a problem you'd like to solve.</p>
+          <a class="btn btn-primary" href="#quiz">Find your starting point <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="audience-list">
+          <div class="audience-item reveal"><b>🎓</b><span>College students & fresh graduates</span></div>
+          <div class="audience-item reveal"><b>💼</b><span>Working professionals</span></div>
+          <div class="audience-item reveal"><b>▦</b><span>Managers & business teams</span></div>
+          <div class="audience-item reveal"><b>✦</b><span>Non-technical beginners</span></div>
+          <div class="audience-item reveal"><b>◎</b><span>Freelancers & entrepreneurs</span></div>
+          <div class="audience-item reveal"><b>⌘</b><span>Curious problem-solvers</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STARTING-POINT QUIZ ================= -->
+    <section id="quiz" class="white-bg">
+      <div class="wrap quiz-wrap">
+        <div class="section-head left reveal">
+          <div class="kicker">Find your starting point</div>
+          <h2>Not sure where to begin? Answer three quick questions.</h2>
+          <p class="lead">We'll suggest the track that fits your experience and goals. It takes about 30 seconds, and you can change your mind any time.</p>
+        </div>
+
+        <div class="quiz reveal" id="quizBox" aria-live="polite">
+          <div class="quiz-progress" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div id="quizBody"></div>
+          <div class="result" id="quizResult">
+            <span class="result-badge">Your suggested starting point</span>
+            <h3 id="resultTitle"></h3>
+            <p id="resultText"></p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#start" id="resultCta">Join the waitlist for this track →</a>
+              <button class="btn btn-secondary" type="button" id="quizRestart">Retake</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPROACH ================= -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">Our philosophy</div>
+          <h2>Learn by doing. Build by applying. Grow with AI.</h2>
+          <p>We believe AI education should be more than watching demonstrations. It should give you the confidence to experiment, the structure to solve problems and the practice to use new skills in the real world.</p>
+        </div>
+        <div class="principles">
+          <div class="principle reveal"><div class="num">01</div><h3>Practical over theoretical</h3><p>Every concept is tied to a task you'll actually do — at college, at work or in your own business.</p></div>
+          <div class="principle reveal"><div class="num">02</div><h3>Confidence before complexity</h3><p>We start with accessible tools and build up, so no one gets left behind on day one.</p></div>
+          <div class="principle reveal"><div class="num">03</div><h3>Responsible by default</h3><p>Checking accuracy, protecting data and using judgement are built into every module.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR TEAM ================= -->
+    <section id="team" class="white-bg">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">Our team</div>
+          <h2>The people behind BuildMySkill.ai.</h2>
+          <p>A founding team committed to making practical AI skills accessible to every learner — and helping you put them to work.</p>
+        </div>
+        <div class="people">
+          <article class="person reveal"><div class="person-avatar" aria-hidden="true">AK</div><div><h3>Ansar KP</h3><div class="role">Founding team</div></div></article>
+          <article class="person reveal"><div class="person-avatar" aria-hidden="true">SK</div><div><h3>Siddique KA</h3><div class="role">Founding team</div></div></article>
+          <article class="person reveal"><div class="person-avatar" aria-hidden="true">SP</div><div><h3>Shemeer PM</h3><div class="role">Founding team</div></div></article>
+        </div>
+        <p class="team-cta reveal">Have a question for the team? <a href="#" data-wa-link>Message us on WhatsApp</a> or <a href="#start">register your interest</a>.</p>
+      </div>
+    </section>
+
+    <!-- ================= TEAMS ================= -->
+    <section id="teams">
+      <div class="wrap">
+        <div class="teams reveal">
+          <div class="teams-copy">
+            <div class="kicker">For organisations & colleges</div>
+            <h2>Upskill your team or campus with AI.</h2>
+            <p>Workshops and programs tailored to your team's tools, workflows and goals — for companies, departments, colleges and training partners.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#start" data-track="Team / Organisation training">Enquire about team training →</a>
+            </div>
+          </div>
+          <div class="teams-side">
+            <div><span class="tick">✓</span>Workshops built around your real workflows</div>
+            <div><span class="tick">✓</span>Sessions for non-technical & technical teams</div>
+            <div><span class="tick">✓</span>Use-case discovery to find quick wins</div>
+            <div><span class="tick">✓</span>Online or on-site delivery options</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WAITLIST / LEAD CAPTURE ================= -->
+    <section class="promise" id="start">
+      <div class="wrap">
+        <div class="promise-box">
+          <div class="reveal">
+            <div class="kicker">Join the founding cohort</div>
+            <h2>Your AI journey starts with one skill — and one practical step.</h2>
+            <p>Build your understanding, practise with purpose and discover what you can do when you put AI to work. Register your interest and we'll reach out personally.</p>
+            <ul class="perks">
+              <li>First access to batch dates, fees and schedules</li>
+              <li>Help choosing the right track for your goals</li>
+              <li>Founding-cohort updates before public launch</li>
+            </ul>
+            <div class="contact-alt">
+              <a class="btn btn-ghost-light btn-sm" id="waInline" data-wa href="#" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+              <a class="btn btn-ghost-light btn-sm" id="mailInline" href="mailto:hello@buildmyskill.ai?subject=BuildMySkill.ai%20Learning%20Enquiry">✉ Email us</a>
+            </div>
+          </div>
+
+          <div class="form-card reveal">
+            <form id="leadForm" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="company_website" novalidate>
+              <input type="hidden" name="form-name" value="waitlist" />
+              <p class="hp"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off" /></label></p>
+              <h3>Register your interest</h3>
+              <p class="sub">Takes under a minute. No payment needed.</p>
+
+              <div class="field" data-field="name">
+                <label for="f-name">Full name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Priya Sharma" required />
+                <span class="err">Please enter your name.</span>
+              </div>
+              <div class="grid-2">
+                <div class="field" data-field="phone">
+                  <label for="f-phone">Mobile (WhatsApp)</label>
+                  <div class="phone"><span>+91</span><input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="98XXXXXXXX" maxlength="14" required /></div>
+                  <span class="err">Enter a valid 10-digit mobile number.</span>
+                </div>
+                <div class="field" data-field="email">
+                  <label for="f-email">Email <span class="opt-tag">(optional)</span></label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+                  <span class="err">Please check your email address.</span>
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="field" data-field="profile">
+                  <label for="f-profile">I am a</label>
+                  <select id="f-profile" name="profile" required>
+                    <option value="">Select one</option>
+                    <option>College student</option>
+                    <option>Fresh graduate / job seeker</option>
+                    <option>Working professional</option>
+                    <option>Manager / team lead</option>
+                    <option>Freelancer / entrepreneur</option>
+                    <option>Organisation / college (team training)</option>
+                    <option>Other</option>
+                  </select>
+                  <span class="err">Please choose one.</span>
+                </div>
+                <div class="field" data-field="track">
+                  <label for="f-track">Interested in</label>
+                  <select id="f-track" name="track" required>
+                    <option value="">Select a track</option>
+                    <option>AI Foundations</option>
+                    <option>AI for Work & Productivity</option>
+                    <option>AI Automation Builder</option>
+                    <option>Team / Organisation training</option>
+                    <option>Not sure yet — help me choose</option>
+                  </select>
+                  <span class="err">Please choose a track.</span>
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="field">
+                  <label for="f-city">City <span class="opt-tag">(optional)</span></label>
+                  <input id="f-city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. Bengaluru" />
+                </div>
+                <div class="field">
+                  <label for="f-time">Preferred timing <span class="opt-tag">(optional)</span></label>
+                  <select id="f-time" name="timing">
+                    <option value="">No preference</option>
+                    <option>Weekday evenings</option>
+                    <option>Weekends</option>
+                    <option>Weekday daytime</option>
+                    <option>Self-paced</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="f-goal">What would you like to use AI for? <span class="opt-tag">(optional)</span></label>
+                <textarea id="f-goal" name="goal" rows="2" placeholder="e.g. Automate my weekly sales report"></textarea>
+              </div>
+              <label class="consent"><input type="checkbox" name="whatsapp_consent" value="yes" checked /> <span>Send me updates on WhatsApp and email. You can opt out any time.</span></label>
+              <input type="hidden" name="quiz_result" id="f-quiz" />
+              <input type="hidden" name="source_page" id="f-source" />
+              <button class="btn btn-primary btn-block" type="submit" id="submitBtn">Join the waitlist <span aria-hidden="true">→</span></button>
+              <p class="form-foot">We respect your privacy. Your details are used only to contact you about BuildMySkill.ai.</p>
+            </form>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite">
+              <div class="big">✓</div>
+              <h3 id="statusTitle">You're on the list!</h3>
+              <p id="statusText">Thanks for registering. We'll reach out with dates, fees and next steps soon.</p>
+              <div class="actions" id="statusActions"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" style="padding-top:0">
+      <div class="wrap faq-grid">
+        <div class="section-head left reveal">
+          <div class="kicker">Good to know</div>
+          <h2>Questions, answered.</h2>
+          <p class="lead">AI learning should feel approachable. Here are a few things to know before you begin.</p>
+          <div class="faq-help">Can't find your answer? <a href="#start">Register your interest</a> and add your question — we'll get back to you personally.</div>
+        </div>
+        <div class="faq-list">
+          <div class="faq"><button aria-expanded="false"><span>Do I need to know coding to get started?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>No. The learning journey starts with accessible AI tools and practical applications. You can explore no-code and low-code automation as your confidence grows — no programming background required.</p></div></div></div>
+          <div class="faq"><button aria-expanded="false"><span>Who are the programs designed for?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>College students, fresh graduates, working professionals, managers, freelancers, entrepreneurs and anyone who wants to apply AI in practical ways. We also run tailored sessions for teams and colleges.</p></div></div></div>
+          <div class="faq"><button aria-expanded="false"><span>Will I learn more than prompting?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>Yes. Prompting is only the starting point. The pathway moves into productivity with documents, decks and data, then into automation and AI-powered workflows — each with hands-on projects.</p></div></div></div>
+          <div class="faq"><button aria-expanded="false"><span>When do batches start, and what are the fees?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>We're finalising our founding cohort. Batch dates, fees and schedules will be shared with the waitlist first, so registering your interest is the best way to get early access.</p></div></div></div>
+          <div class="faq"><button aria-expanded="false"><span>Are classes online or in person?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>Programs are planned as live online sessions with hands-on practice, so you can join from anywhere. Let us know your preferred timing in the form and we'll factor it into batch planning.</p></div></div></div>
+          <div class="faq"><button aria-expanded="false"><span>What do I need to join?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>A laptop or desktop with a stable internet connection is recommended for hands-on work. Most tools we use have free tiers, and we'll tell you exactly what to set up before you start.</p></div></div></div>
+          <div class="faq"><button aria-expanded="false"><span>Can you train my team or college?</span><span class="plus">+</span></button><div class="faq-answer"><div><p>Yes. We can tailor workshops and programs around your team's tools and workflows. Choose "Team / Organisation training" in the form and we'll get in touch to understand your needs.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="#home"><span class="brand-mark">B</span><span>BuildMySkill.ai</span></a>
+          <p>Building Skills for an AI-Powered World. Practical, project-based AI learning for students, professionals and teams.</p>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul><li><a href="#learning">What you'll learn</a></li><li><a href="#programs">Programs</a></li><li><a href="#pathway">Learning path</a></li><li><a href="#projects">Projects</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="#about">Our approach</a></li><li><a href="#team">Our team</a></li><li><a href="#who">Who it's for</a></li><li><a href="#teams">For teams</a></li><li><a href="#faq">FAQ</a></li></ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="mailto:hello@buildmyskill.ai" id="footerMail">hello@buildmyskill.ai</a></li>
+            <li><a href="tel:+918971326915">+91 89713 26915</a></li>
+            <li><a href="#" id="footerWa" data-wa target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><a href="#start">Join the waitlist</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> BuildMySkill.ai. All rights reserved.</span>
+        <span>Made in India 🇮🇳 for learners everywhere.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta" id="mobileCta">
+    <a class="btn btn-secondary" href="#quiz">Find my track</a>
+    <a class="btn btn-primary" href="#start">Join waitlist</a>
+  </div>
+
+  <!-- WhatsApp floating button (shows only when a number is configured) -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 10 9.9 5.2 16 5.2S27 10 27 15.9 22.1 26.4 16 26.4zm6-7.8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4z"/></svg>
+  </a>
+
+  <script>
+  /* =====================================================================
+     SITE CONFIG — edit these values before going live.
+     WHATSAPP_NUMBER: country code + number, digits only (e.g. "919876543210").
+     Leave it empty ("") to hide every WhatsApp button automatically.
+     ===================================================================== */
+  const CONFIG = {
+    EMAIL: "hello@buildmyskill.ai",
+    WHATSAPP_NUMBER: "918971326915",
+    WHATSAPP_GREETING: "Hi BuildMySkill.ai! I'd like to know more about your AI programs."
+  };
+
+  document.documentElement.classList.add('js');
+
+  (function(){
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+    const waLink = (msg) => `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg || CONFIG.WHATSAPP_GREETING)}`;
+
+    /* ---- Contact wiring ---- */
+    if (CONFIG.WHATSAPP_NUMBER) {
+      document.body.classList.add('has-wa');
+      ['waFloat','waInline','footerWa'].forEach(id => { const a = document.getElementById(id); if (a) a.href = waLink(); });
+      $$('[data-wa-link]').forEach(a => { a.href = waLink(); a.target = '_blank'; a.rel = 'noopener'; });
+    } else {
+      $$('[data-wa-link]').forEach(a => { a.href = '#start'; a.textContent = 'Contact us'; });
+    }
+    const mail = `mailto:${CONFIG.EMAIL}?subject=${encodeURIComponent('BuildMySkill.ai Learning Enquiry')}`;
+    $('#mailInline').href = mail;
+    const fm = $('#footerMail'); fm.href = `mailto:${CONFIG.EMAIL}`; fm.textContent = CONFIG.EMAIL;
+    $('#year').textContent = new Date().getFullYear();
+
+    /* ---- Mobile menu (kept from original, with outside-click + Esc close) ---- */
+    const menuBtn = $('#menuBtn'), navlinks = $('#navlinks');
+    const setMenu = (open) => {
+      navlinks.classList.toggle('show', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      menuBtn.textContent = open ? '✕' : '☰';
+    };
+    menuBtn.addEventListener('click', () => setMenu(!navlinks.classList.contains('show')));
+    navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('click', e => { if (!e.target.closest('.nav')) setMenu(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+    /* ---- Header shadow + mobile sticky CTA ---- */
+    const header = $('#siteHeader'), mcta = $('#mobileCta'), startSec = $('#start');
+    let startVisible = false;
+    const onScroll = () => {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 10);
+      mcta.classList.toggle('show', y > 520 && !startVisible);
+    };
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+    /* ---- Active nav link + reveal + progress bars ---- */
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => entries.forEach(en => {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+      $$('.reveal').forEach(el => io.observe(el));
+
+      const links = $$('.navlinks a');
+      const spy = new IntersectionObserver(entries => entries.forEach(en => {
+        if (en.isIntersecting) {
+          const id = en.target.id;
+          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+        }
+      }), {rootMargin:'-45% 0px -50% 0px'});
+      ['learning','programs','pathway','projects','who','faq'].forEach(id => { const s = document.getElementById(id); if (s) spy.observe(s); });
+
+      new IntersectionObserver(entries => entries.forEach(en => {
+        startVisible = en.isIntersecting; onScroll();
+      })).observe(startSec);
+    } else {
+      $$('.reveal').forEach(el => el.classList.add('in'));
+    }
+    const fillBars = () => $$('.progress i').forEach(i => i.style.width = i.dataset.w);
+    reduce ? fillBars() : setTimeout(fillBars, 350);
+
+    /* ---- FAQ accordion (kept, now animated + one-open-at-a-time) ---- */
+    $$('.faq button').forEach(button => button.addEventListener('click', () => {
+      const faq = button.closest('.faq');
+      const willOpen = !faq.classList.contains('open');
+      $$('.faq.open').forEach(f => { f.classList.remove('open'); f.querySelector('button').setAttribute('aria-expanded','false'); });
+      if (willOpen) { faq.classList.add('open'); button.setAttribute('aria-expanded','true'); }
+    }));
+
+    /* ---- Track pre-selection from any "Join waitlist for this track" button ---- */
+    const trackSel = $('#f-track');
+    const preselect = (track) => {
+      if (!track) return;
+      const opt = Array.from(trackSel.options).find(o => o.text === track);
+      if (opt) { trackSel.value = opt.text; trackSel.closest('.field').classList.remove('invalid'); }
+      if (track.startsWith('Team')) $('#f-profile').value = 'Organisation / college (team training)';
+    };
+    $$('[data-track]').forEach(a => a.addEventListener('click', () => preselect(a.dataset.track)));
+
+    /* ---- Starting-point quiz ---- */
+    const QUESTIONS = [
+      { q: "How would you describe your experience with AI today?", o: [
+        ["I've barely used AI tools", 0], ["I use ChatGPT or similar now and then", 1], ["I use AI regularly for work or study", 2] ] },
+      { q: "What do you want most right now?", o: [
+        ["Understand AI and use it confidently", 0], ["Save time and do better work", 1], ["Automate tasks and build workflows", 2] ] },
+      { q: "How comfortable are you with tools like spreadsheets or apps such as Zapier?", o: [
+        ["I'm just getting started", 0], ["Comfortable with spreadsheets and everyday apps", 1], ["I enjoy setting up tools and connecting apps", 2] ] }
+    ];
+    const RESULTS = [
+      { t: "AI Foundations", d: "Start with the essentials: the right tools, better prompts and responsible use. You'll build confidence fast and be ready for productivity work next." },
+      { t: "AI for Work & Productivity", d: "You already know the basics. This track helps you apply AI to documents, decks, data and real work processes — and save hours every week." },
+      { t: "AI Automation Builder", d: "You're ready to go beyond chat. Learn to map processes and build no-code AI workflows that run on their own." }
+    ];
+    let qi = 0, answers = [];
+    const body = $('#quizBody'), result = $('#quizResult'), bars = $$('.quiz-progress i');
+    const renderQ = () => {
+      bars.forEach((b,i) => b.classList.toggle('on', i <= qi));
+      const Q = QUESTIONS[qi];
+      body.innerHTML = `<div class="quiz-count">Question ${qi+1} of ${QUESTIONS.length}</div>
+        <p class="quiz-q">${Q.q}</p>
+        <div class="options">${Q.o.map((o,i)=>`<button type="button" class="opt" data-v="${o[1]}"><span class="k">${String.fromCharCode(65+i)}</span>${o[0]}</button>`).join('')}</div>
+        <div class="quiz-nav"><button type="button" class="linkbtn" id="qBack" ${qi===0?'disabled':''}>← Back</button><span style="color:var(--muted-2)">Takes ~30 seconds</span></div>`;
+      $$('.opt', body).forEach(b => b.addEventListener('click', () => {
+        answers[qi] = +b.dataset.v;
+        if (qi < QUESTIONS.length - 1) { qi++; renderQ(); } else { showResult(); }
+      }));
+      $('#qBack').addEventListener('click', () => { if (qi>0){ qi--; renderQ(); } });
+    };
+    const showResult = () => {
+      const avg = answers.reduce((a,b)=>a+b,0) / answers.length;
+      // Goal (Q2) weighs in: someone who wants automation but is new still starts lower.
+      let idx = avg < 0.75 ? 0 : avg < 1.6 ? 1 : 2;
+      if (answers[1] === 2 && answers[2] >= 1) idx = Math.max(idx, 2);
+      const R = RESULTS[idx];
+      body.innerHTML = ''; result.classList.add('show');
+      $('#resultTitle').textContent = R.t;
+      $('#resultText').textContent = R.d;
+      $('#f-quiz').value = R.t;
+      $('#resultCta').onclick = () => preselect(R.t);
+      bars.forEach(b => b.classList.add('on'));
+    };
+    $('#quizRestart').addEventListener('click', () => { qi = 0; answers = []; result.classList.remove('show'); renderQ(); });
+    renderQ();
+
+    /* ---- Lead form: validation + Netlify submit + graceful fallback ---- */
+    const form = $('#leadForm'), status = $('#formStatus'), submitBtn = $('#submitBtn');
+    $('#f-source').value = location.href;
+    const phoneInput = $('#f-phone');
+    phoneInput.addEventListener('input', () => { phoneInput.value = phoneInput.value.replace(/[^\d\s]/g,''); });
+    const cleanPhone = v => { let d = v.replace(/\D/g,''); if (d.length === 12 && d.startsWith('91')) d = d.slice(2); if (d.length === 11 && d.startsWith('0')) d = d.slice(1); return d; };
+    const rules = {
+      name: v => v.trim().length >= 2,
+      phone: v => /^[6-9]\d{9}$/.test(cleanPhone(v)),
+      email: v => !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+      profile: v => !!v, track: v => !!v
+    };
+    const check = (name) => {
+      const el = form.elements[name], wrap = form.querySelector(`[data-field="${name}"]`);
+      const ok = rules[name](el.value); wrap.classList.toggle('invalid', !ok); return ok;
+    };
+    Object.keys(rules).forEach(n => {
+      const el = form.elements[n];
+      el.addEventListener('blur', () => { if (el.value) check(n); });
+      el.addEventListener('change', () => { if (form.querySelector(`[data-field="${n}"]`).classList.contains('invalid')) check(n); });
+    });
+
+    const summary = (d) => `Name: ${d.name}\nMobile: +91 ${d.phone}\nEmail: ${d.email || '-'}\nI am a: ${d.profile}\nInterested in: ${d.track}\nCity: ${d.city || '-'}\nPreferred timing: ${d.timing || '-'}\nGoal: ${d.goal || '-'}`;
+    const showStatus = (ok, d) => {
+      form.style.display = 'none'; status.classList.add('show');
+      const acts = $('#statusActions'); acts.innerHTML = '';
+      const first = d.name.split(' ')[0];
+      if (ok) {
+        $('#statusTitle').textContent = `You're on the list, ${first}!`;
+        $('#statusText').textContent = `Thanks for your interest in ${d.track}. We'll reach out on +91 ${d.phone} with dates, fees and next steps.`;
+      } else {
+        status.querySelector('.big').textContent = '✉';
+        $('#statusTitle').textContent = 'One last step';
+        $('#statusText').textContent = "We couldn't submit the form automatically. Send your details with one tap below and we'll get back to you.";
+        const m = document.createElement('a'); m.className = 'btn btn-primary';
+        m.href = `mailto:${CONFIG.EMAIL}?subject=${encodeURIComponent('Waitlist: ' + d.track)}&body=${encodeURIComponent(summary(d))}`;
+        m.textContent = 'Send by email'; acts.appendChild(m);
+      }
+      if (CONFIG.WHATSAPP_NUMBER) {
+        const w = document.createElement('a'); w.className = 'btn btn-secondary'; w.target = '_blank'; w.rel = 'noopener';
+        w.href = waLink(`Hi BuildMySkill.ai! I just registered.\n${summary(d)}`);
+        w.textContent = ok ? 'Say hi on WhatsApp' : 'Send on WhatsApp'; acts.appendChild(w);
+      }
+      status.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const results = Object.keys(rules).map(check);
+      if (results.includes(false)) { const bad = form.querySelector('.field.invalid input, .field.invalid select'); if (bad) bad.focus(); return; }
+      if (form.elements.company_website.value) return; // bot
+      const fd = new FormData(form);
+      fd.set('phone', cleanPhone(fd.get('phone')));
+      const d = Object.fromEntries(fd.entries());
+      submitBtn.setAttribute('aria-busy','true'); submitBtn.textContent = 'Submitting…';
+      let ok = false;
+      if (location.protocol.startsWith('http')) {
+        try {
+          const res = await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(fd).toString() });
+          ok = res.ok;
+        } catch (err) { ok = false; }
+      }
+      try { localStorage.setItem('bms_lead_submitted', new Date().toISOString()); } catch (err) {}
+      showStatus(ok, d);
+    });
+  })();
+  </script>
+</body>
+</html>
